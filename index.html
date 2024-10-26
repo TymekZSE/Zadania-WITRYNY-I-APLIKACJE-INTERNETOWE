@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+	WITRYNY I APLIKACJE INTERNETOWE
+		<br><br>
+	PROSTA STRONA	
+	</h1>
+	<br>
+	
+    <font color="red"><p>Kliknij przyciski i zobacz co się stanie.</p></font>
+
+    <button onclick="showAlert()">Zadanie na</button>
+    <button onclick="askName()">Podaj swoje imię</button>
+    <button onclick="confirmAction()">Potwierdź akcję</button>
+    <button onclick="openNewWindow()">Strona ZSE</button>
+
+    <script>
+        // Autor: Tymoteusz Trzciński, klasa 3K
+
+        // Funkcja wyświetla okno dialogowe alert() z komunikatem.
+        function showAlert() {
+            alert("30.10.2024");
+        }
+
+        // Funkcja pyta użytkownika o imię za pomocą prompt() i wyświetla wynik w alert().
+        function askName() {
+            // Pobranie imienia użytkownika
+            const name = prompt("Jak masz na imię?");
+            
+            // Sprawdzenie, czy użytkownik wprowadził imię
+            if (name) {
+                alert("Witaj, " + name + "!");
+            } else {
+                alert("Nie podałeś imienia.");
+            }
+        }
+
+        // Funkcja wyświetla okno confirm() i na podstawie wyboru użytkownika wyświetla odpowiedni komunikat.
+        function confirmAction() {
+            // Wyświetlenie okna potwierdzenia
+            const confirmed = confirm("Czy na pewno chcesz wykonać tę akcję?");
+            
+            // Sprawdzenie decyzji użytkownika
+            if (confirmed) {
+                alert("Akcja została potwierdzona.");
+            } else {
+                alert("Anulowano akcję.");
+            }
+        }
+
+        // Funkcja otwiera nowe okno przeglądarki z podanym adresem URL.
+        function openNewWindow() {
+            window.open("https://zse.edu.gdansk.pl/pl", "_blank", "width=1093,height=953");
+        }
+    </script>
+</body>
+</html>
